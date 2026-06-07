@@ -77,6 +77,30 @@
   --chart-5: oklch(0.769 0.188 70.08);
 }
 
+.dark {
+  --background: oklch(0.16 0.025 270);
+  --foreground: oklch(0.96 0.01 260);
+  --card: oklch(0.21 0.03 270);
+  --card-foreground: oklch(0.96 0.01 260);
+  --popover: oklch(0.21 0.03 270);
+  --popover-foreground: oklch(0.96 0.01 260);
+  --primary: oklch(0.72 0.18 290);
+  --primary-foreground: oklch(0.15 0.03 270);
+  --secondary: oklch(0.26 0.03 270);
+  --secondary-foreground: oklch(0.95 0.01 260);
+  --muted: oklch(0.24 0.025 270);
+  --muted-foreground: oklch(0.72 0.03 260);
+  --accent: oklch(0.32 0.08 320);
+  --accent-foreground: oklch(0.96 0.02 320);
+  --brand: oklch(0.72 0.18 290);
+  --brand-foreground: oklch(0.15 0.03 270);
+  --accent-2: oklch(0.75 0.18 340);
+  --accent-3: oklch(0.78 0.14 220);
+  --border: oklch(0.3 0.025 270);
+  --input: oklch(0.3 0.025 270);
+  --ring: oklch(0.72 0.18 290);
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -104,25 +128,25 @@
 }
 
 @utility glass {
-  background-color: color-mix(in oklab, white 60%, transparent);
+  background-color: color-mix(in oklab, var(--background) 55%, transparent);
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
-  border: 1px solid color-mix(in oklab, white 70%, transparent);
+  border: 1px solid color-mix(in oklab, var(--foreground) 12%, transparent);
 }
 
 @utility glass-strong {
-  background-color: color-mix(in oklab, white 80%, transparent);
+  background-color: color-mix(in oklab, var(--background) 75%, transparent);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid color-mix(in oklab, white 80%, transparent);
+  border: 1px solid color-mix(in oklab, var(--foreground) 16%, transparent);
 }
 
 @utility bg-mesh {
   background-image:
-    radial-gradient(at 20% 10%, oklch(0.9 0.12 280 / 0.45) 0px, transparent 50%),
-    radial-gradient(at 80% 0%, oklch(0.9 0.12 340 / 0.4) 0px, transparent 50%),
-    radial-gradient(at 0% 60%, oklch(0.92 0.1 220 / 0.45) 0px, transparent 50%),
-    radial-gradient(at 80% 80%, oklch(0.9 0.12 300 / 0.35) 0px, transparent 50%);
+    radial-gradient(at 20% 10%, color-mix(in oklab, var(--primary) 25%, transparent) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, color-mix(in oklab, var(--accent-2) 22%, transparent) 0px, transparent 50%),
+    radial-gradient(at 0% 60%, color-mix(in oklab, var(--accent-3) 25%, transparent) 0px, transparent 50%),
+    radial-gradient(at 80% 80%, color-mix(in oklab, var(--primary) 20%, transparent) 0px, transparent 50%);
 }
 
 @utility shadow-glow {
