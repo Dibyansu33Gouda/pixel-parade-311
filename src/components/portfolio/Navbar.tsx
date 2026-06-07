@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -55,19 +56,25 @@ export function Navbar() {
               </a>
             ))}
           </nav>
-          <a
-            href="#contact"
-            className="hidden lg:inline-flex items-center rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-105"
-          >
-            Let's talk
-          </a>
-          <button
+          <div className="hidden lg:flex items-center gap-2">
+            <ThemeToggle />
+            <a
+              href="#contact"
+              className="inline-flex items-center rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-105"
+            >
+              Let's talk
+            </a>
+          </div>
+          <div className="lg:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
             className="lg:hidden grid h-9 w-9 place-items-center rounded-full bg-secondary"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
             {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </button>
+          </div>
         </div>
         {open && (
           <motion.div
