@@ -39,7 +39,13 @@ export function Certifications() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {certs.map((c, i) => (
           <FadeIn key={c.title} delay={i * 0.06}>
-            <div className="group h-full rounded-3xl glass overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-glow">
+            <a
+              href={c.url ?? undefined}
+              target={c.url ? "_blank" : undefined}
+              rel={c.url ? "noopener noreferrer" : undefined}
+              onClick={(e) => { if (!c.url) e.preventDefault(); }}
+              className={`group block h-full rounded-3xl glass overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-glow ${c.url ? "cursor-pointer" : "cursor-default"}`}
+            >
               <div className={`relative h-28 bg-gradient-to-br ${c.gradient}`}>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.5),transparent_60%)]" />
                 <Award className="absolute right-4 top-4 h-6 w-6 text-white/90" />
@@ -62,7 +68,7 @@ export function Certifications() {
                   </span>
                 )}
               </div>
-            </div>
+            </a>
           </FadeIn>
         ))}
       </div>
