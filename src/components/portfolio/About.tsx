@@ -39,7 +39,7 @@ const cards = [
   {
     Icon: GraduationCap,
     title: "Academic Journey",
-    body: "B.Tech CSE at NIST University, Baripada (2025 batch). Currently in my 3rd semester, learning the core of computer science.",
+    body: "B.Tech CSE at NIST University, Berhampur (2025 batch). Currently in my 3rd semester, learning the core of computer science.",
   },
   {
     Icon: Sparkles,
@@ -69,7 +69,7 @@ export function About() {
           <span className="text-gradient">build stuff</span>.
         </>
       }
-      description="I'm a B.Tech CSE student at NIST University, Baripada (2025 batch), currently in my 3rd semester. I'm interested in AI, software development, and building real projects. I enjoy learning by doing — from writing C programs to exploring Python and working with Git."
+      description="I'm a B.Tech CSE student at NIST University, Berhampur (2025 batch), currently in my 3rd semester. I'm interested in AI, software development, and building real projects. I enjoy learning by doing — from writing C programs to exploring Python and working with Git."
     >
       <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
         <div className="grid sm:grid-cols-2 gap-4">
