@@ -121,6 +121,14 @@ export function Projects() {
           ))}
         </AnimatePresence>
       </motion.div>
+      {filtered.length === 0 && (
+        <div className="rounded-3xl glass p-12 text-center">
+          <p className="text-lg font-semibold">Projects coming soon</p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            I'm currently building a few projects across software, web, and AI. They'll show up here shortly.
+          </p>
+        </div>
+      )}
     </Section>
   );
 }
