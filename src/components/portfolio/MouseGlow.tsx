@@ -18,7 +18,7 @@ export function MouseGlow() {
       className="pointer-events-none fixed top-0 left-0 z-0 h-[400px] w-[400px] rounded-full opacity-40 blur-3xl"
       style={{
         background:
-          "radial-gradient(circle, oklch(0.7 0.2 290 / 0.4), oklch(0.8 0.15 340 / 0.2), transparent 70%)",
+          "radial-gradient(circle, oklch(0.65 0.18 240 / 0.4), oklch(0.75 0.15 210 / 0.2), transparent 70%)",
       }}
     />
   );
