@@ -5,50 +5,7 @@ import { Section } from "./Section";
 
 type Cat = "All" | "Python" | "Web" | "Cloud" | "AI";
 
-const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; gradient: string }[] = [
-  {
-    title: "Smart Notes Organizer",
-    desc: "Python CLI app that auto-categorizes notes using simple NLP and stores them in SQLite.",
-    tags: ["Python", "SQLite", "NLP"],
-    cats: ["Python", "AI"],
-    gradient: "from-violet-400 to-pink-400",
-  },
-  {
-    title: "Cloud Cost Tracker",
-    desc: "Dashboard prototype that visualizes mock cloud spend across services and regions.",
-    tags: ["Cloud", "Charts", "JS"],
-    cats: ["Cloud", "Web"],
-    gradient: "from-sky-400 to-indigo-400",
-  },
-  {
-    title: "Portfolio Website",
-    desc: "This very website — modern, animated, responsive, built with React and Tailwind.",
-    tags: ["React", "Tailwind", "Motion"],
-    cats: ["Web"],
-    gradient: "from-pink-400 to-amber-400",
-  },
-  {
-    title: "AI Study Buddy",
-    desc: "Concept-explanation assistant powered by a local LLM playground and prompt templates.",
-    tags: ["AI", "Python", "Prompting"],
-    cats: ["AI", "Python"],
-    gradient: "from-emerald-400 to-cyan-400",
-  },
-  {
-    title: "Library DB System",
-    desc: "Normalized relational schema with stored procedures for a campus library workflow.",
-    tags: ["SQL", "PostgreSQL"],
-    cats: ["Python"],
-    gradient: "from-amber-400 to-rose-400",
-  },
-  {
-    title: "Weather Microsite",
-    desc: "Responsive weather page consuming a public API with elegant glassmorphism UI.",
-    tags: ["Web", "API", "CSS"],
-    cats: ["Web", "Cloud"],
-    gradient: "from-cyan-400 to-violet-400",
-  },
-];
+const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; gradient: string }[] = [];
 
 const cats: Cat[] = ["All", "Python", "Web", "Cloud", "AI"];
 
@@ -164,6 +121,14 @@ export function Projects() {
           ))}
         </AnimatePresence>
       </motion.div>
+      {filtered.length === 0 && (
+        <div className="rounded-3xl glass p-12 text-center">
+          <p className="text-lg font-semibold">Projects coming soon</p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            I'm currently building a few projects across software, web, and AI. They'll show up here shortly.
+          </p>
+        </div>
+      )}
     </Section>
   );
 }

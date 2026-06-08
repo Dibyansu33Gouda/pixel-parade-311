@@ -2,12 +2,21 @@ import { Section, FadeIn } from "./Section";
 import { Award, ExternalLink } from "lucide-react";
 
 const certs = [
-  { title: "Python for Everybody", org: "Coursera", gradient: "from-violet-400 to-indigo-400" },
-  { title: "Introduction to Cloud", org: "IBM SkillsBuild", gradient: "from-sky-400 to-cyan-400" },
-  { title: "AI Fundamentals", org: "Microsoft Learn", gradient: "from-pink-400 to-rose-400" },
-  { title: "SQL Essentials", org: "HackerRank", gradient: "from-amber-400 to-orange-400" },
-  { title: "Git & GitHub Basics", org: "freeCodeCamp", gradient: "from-emerald-400 to-teal-400" },
-  { title: "Web Dev Bootcamp (in progress)", org: "Udemy", gradient: "from-fuchsia-400 to-pink-400" },
+  {
+    title: "Artificial Intelligence Fundamentals",
+    org: "Microsoft",
+    gradient: "from-sky-500 to-blue-600",
+  },
+  {
+    title: "Artificial Intelligence Essentials",
+    org: "IBM SkillsBuild",
+    gradient: "from-indigo-500 to-blue-700",
+  },
+  {
+    title: "Python Essentials",
+    org: "Cisco Networking Academy",
+    gradient: "from-teal-500 to-cyan-600",
+  },
 ];
 
 export function Certifications() {
