@@ -29,9 +29,9 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 const stats = [
-  { label: "Projects Built", value: 8, suffix: "+" },
-  { label: "Certifications", value: 5, suffix: "+" },
-  { label: "Technologies", value: 12, suffix: "+" },
+  { label: "Projects Built", value: 3, suffix: "+" },
+  { label: "Certifications", value: 3, suffix: "" },
+  { label: "Languages", value: 4, suffix: "" },
   { label: "Learning Hours", value: 500, suffix: "+" },
 ];
 
@@ -39,22 +39,22 @@ const cards = [
   {
     Icon: GraduationCap,
     title: "Academic Journey",
-    body: "Currently in my 2nd year of B.Tech in Computer Science Engineering at NIST University, building strong foundations in software and systems.",
+    body: "B.Tech CSE at NIST University, Baripada (2025 batch). Currently in my 3rd semester, learning the core of computer science.",
   },
   {
     Icon: Sparkles,
     title: "Interests",
-    body: "Software development, cloud computing, AI fundamentals, and exploring how modern tools can solve real-world problems.",
+    body: "AI, software development, and building real projects that actually work. I like turning ideas into code.",
   },
   {
     Icon: Target,
-    title: "Career Goals",
-    body: "Aspiring software engineer aiming to build scalable, intelligent products and contribute to impactful open-source work.",
+    title: "What I Do",
+    body: "Write C programs, explore Python, work with Git, and keep building small projects to learn faster.",
   },
   {
     Icon: BookOpen,
-    title: "Approach",
-    body: "Curious by nature, consistent by habit. I learn by building — turning ideas into shipped projects and shareable demos.",
+    title: "How I Learn",
+    body: "By doing. Reading docs is fine, but writing code and fixing bugs is where the real learning happens.",
   },
 ];
 
@@ -65,11 +65,11 @@ export function About() {
       eyebrow="About"
       title={
         <>
-          A student-developer who loves{" "}
-          <span className="text-gradient">building things</span>.
+          A student who likes to{" "}
+          <span className="text-gradient">build stuff</span>.
         </>
       }
-      description="I blend curiosity with consistency — exploring computer science deeply while shipping projects that connect theory to practice."
+      description="I'm a B.Tech CSE student at NIST University, Baripada (2025 batch), currently in my 3rd semester. I'm interested in AI, software development, and building real projects. I enjoy learning by doing — from writing C programs to exploring Python and working with Git."
     >
       <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
         <div className="grid sm:grid-cols-2 gap-4">
@@ -109,7 +109,7 @@ export function About() {
             </div>
             <div className="mt-8 pt-6 border-t border-border/60">
               <p className="text-sm text-muted-foreground italic">
-                "Every line of code is a step toward becoming the engineer I want to be."
+                "The best way to learn is to build something that breaks, then fix it."
               </p>
             </div>
           </div>
