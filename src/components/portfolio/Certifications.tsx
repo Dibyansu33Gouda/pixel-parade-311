@@ -1,21 +1,26 @@
 import { Section, FadeIn } from "./Section";
 import { Award, ExternalLink } from "lucide-react";
+import microsoftCert from "@/assets/microsoft-ai-fundamentals.pdf.asset.json";
+import ciscoCert from "@/assets/cisco-python-essentials.pdf.asset.json";
 
 const certs = [
   {
     title: "Artificial Intelligence Fundamentals",
     org: "Microsoft",
     gradient: "from-sky-500 to-blue-600",
+    url: microsoftCert.url,
   },
   {
     title: "Artificial Intelligence Essentials",
     org: "IBM SkillsBuild",
     gradient: "from-indigo-500 to-blue-700",
+    url: null,
   },
   {
     title: "Python Essentials",
     org: "Cisco Networking Academy",
     gradient: "from-teal-500 to-cyan-600",
+    url: ciscoCert.url,
   },
 ];
 
@@ -42,13 +47,20 @@ export function Certifications() {
               <div className="p-5">
                 <h3 className="font-semibold">{c.title}</h3>
                 <div className="mt-1 text-sm text-muted-foreground">{c.org}</div>
-                <a
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
-                  className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary opacity-0 -translate-y-1 transition-all group-hover:opacity-100 group-hover:translate-y-0"
-                >
-                  View credential <ExternalLink className="h-3.5 w-3.5" />
-                </a>
+                {c.url ? (
+                  <a
+                    href={c.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary opacity-0 -translate-y-1 transition-all group-hover:opacity-100 group-hover:translate-y-0"
+                  >
+                    View credential <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                ) : (
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground opacity-0 -translate-y-1 transition-all group-hover:opacity-100 group-hover:translate-y-0">
+                    Credential coming soon
+                  </span>
+                )}
               </div>
             </div>
           </FadeIn>
