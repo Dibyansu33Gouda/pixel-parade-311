@@ -37,7 +37,7 @@ export function Footer() {
           <div className="text-sm font-semibold mb-3">Connect</div>
           <div className="flex gap-3">
             {[
-              { Icon: Github, href: "https://github.com/" },
+              { Icon: Github, href: "https://github.com/dibyansugouda4-debug" },
               { Icon: Linkedin, href: "https://www.linkedin.com/in/dibyansu-gouda-b5b432379" },
               { Icon: Mail, href: "mailto:babugoudaa44@gmail.com" },
             ].map(({ Icon, href }, i) => (
