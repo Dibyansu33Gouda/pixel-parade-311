@@ -70,6 +70,9 @@ export function Hero() {
             className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05]"
           >
             Dibyansu <span className="text-gradient">Gouda</span>
+            <span className="block text-2xl md:text-3xl lg:text-4xl mt-3 text-muted-foreground font-medium">
+              Computer Science Student & Developer
+            </span>
           </motion.h1>
 
           <motion.p

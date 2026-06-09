@@ -87,17 +87,19 @@ export function Contact() {
             className="rounded-3xl glass p-7 flex flex-col gap-4"
           >
             <div className="grid sm:grid-cols-2 gap-4">
-              <label className="block">
+              <label htmlFor="contact-name" className="block">
                 <span className="text-xs font-medium text-muted-foreground">Name</span>
                 <input
+                  id="contact-name"
                   required
                   className="mt-1.5 w-full rounded-2xl border border-border bg-card px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring transition"
                   placeholder="Your name"
                 />
               </label>
-              <label className="block">
+              <label htmlFor="contact-email" className="block">
                 <span className="text-xs font-medium text-muted-foreground">Email</span>
                 <input
+                  id="contact-email"
                   required
                   type="email"
                   className="mt-1.5 w-full rounded-2xl border border-border bg-card px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring transition"
@@ -105,16 +107,18 @@ export function Contact() {
                 />
               </label>
             </div>
-            <label className="block">
+            <label htmlFor="contact-subject" className="block">
               <span className="text-xs font-medium text-muted-foreground">Subject</span>
               <input
+                id="contact-subject"
                 className="mt-1.5 w-full rounded-2xl border border-border bg-card px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring transition"
                 placeholder="What's this about?"
               />
             </label>
-            <label className="block">
+            <label htmlFor="contact-message" className="block">
               <span className="text-xs font-medium text-muted-foreground">Message</span>
               <textarea
+                id="contact-message"
                 required
                 rows={5}
                 className="mt-1.5 w-full rounded-2xl border border-border bg-card px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring transition resize-none"
