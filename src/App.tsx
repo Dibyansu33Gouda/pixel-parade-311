@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
@@ -10,19 +9,7 @@ import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { MouseGlow } from "@/components/portfolio/MouseGlow";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Dibyansu Gouda — CSE Student & Developer Portfolio" },
-      { name: "description", content: "Portfolio of Dibyansu Gouda, B.Tech CSE student at NIST University. Software, cloud, and AI projects." },
-      { property: "og:title", content: "Dibyansu Gouda — Portfolio" },
-      { property: "og:description", content: "B.Tech CSE student at NIST University. Software, cloud, and AI." },
-    ],
-  }),
-  component: Index,
-});
-
-function Index() {
+export default function App() {
   return (
     <div className="relative min-h-screen overflow-x-clip">
       <MouseGlow />
