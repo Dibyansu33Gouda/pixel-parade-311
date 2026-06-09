@@ -8,7 +8,7 @@ const certs = [
     title: "Artificial Intelligence Fundamentals",
     org: "Microsoft",
     gradient: "from-sky-500 to-blue-600",
-    url: microsoftCert.url,
+    url: "/pixel-parade-311/assets/microsoft-ai-fundamentals.pdf",
   },
   {
     title: "Artificial Intelligence Essentials",
@@ -20,7 +20,7 @@ const certs = [
     title: "Python Essentials",
     org: "Cisco Networking Academy",
     gradient: "from-teal-500 to-cyan-600",
-    url: ciscoCert.url,
+    url: "/pixel-parade-311/assets/cisco-python-essentials.pdf",
   },
 ];
 
