@@ -5,16 +5,16 @@ import { GraduationCap, School, BookOpen } from "lucide-react";
 const items = [
   {
     Icon: GraduationCap,
-    period: "2024 — Present",
+    period: "2025 — Present",
     title: "Bachelor of Technology, Computer Science Engineering",
-    org: "NIST University",
-    detail: "Currently in 2nd year. Coursework spans data structures, databases, operating systems, and software engineering.",
+    org: "NIST University, Berhampur",
+    detail: "Currently in my 3rd semester. Coursework spans data structures, databases, operating systems, and software engineering.",
   },
   {
     Icon: School,
-    period: "2022 — 2024",
+    period: "2023 — 2025",
     title: "Higher Secondary — Science (PCM + CS)",
-    org: "Pre-University",
+    org: "Modern Oxford Public School, Berhampur",
     detail: "Built foundations in mathematics and an early love for programming with Python and C.",
   },
   {
