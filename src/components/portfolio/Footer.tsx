@@ -38,8 +38,8 @@ export function Footer() {
           <div className="flex gap-3">
             {[
               { Icon: Github, href: "https://github.com/" },
-              { Icon: Linkedin, href: "https://linkedin.com/" },
-              { Icon: Mail, href: "mailto:dibyansu@example.com" },
+              { Icon: Linkedin, href: "https://www.linkedin.com/in/dibyansu-gouda-b5b432379" },
+              { Icon: Mail, href: "mailto:babugoudaa44@gmail.com" },
             ].map(({ Icon, href }, i) => (
               <a
                 key={i}

@@ -1,39 +1,8 @@
-import { motion, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { Section, FadeIn } from "./Section";
 import { GraduationCap, Sparkles, Target, BookOpen } from "lucide-react";
 
-function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true });
-  const [n, setN] = useState(0);
-  useEffect(() => {
-    if (!inView) return;
-    const dur = 1500;
-    const start = performance.now();
-    let raf = 0;
-    const tick = (t: number) => {
-      const p = Math.min(1, (t - start) / dur);
-      setN(Math.round(to * (1 - Math.pow(1 - p, 3))));
-      if (p < 1) raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [inView, to]);
-  return (
-    <span ref={ref}>
-      {n}
-      {suffix}
-    </span>
-  );
-}
-
-const stats = [
-  { label: "Projects Built", value: 3, suffix: "+" },
-  { label: "Certifications", value: 3, suffix: "" },
-  { label: "Languages", value: 4, suffix: "" },
-  { label: "Learning Hours", value: 500, suffix: "+" },
-];
+const techStack = ["Python", "C", "Git", "GitHub"];
 
 const cards = [
   {
@@ -89,22 +58,20 @@ export function About() {
         <FadeIn>
           <div className="rounded-3xl glass-strong p-8 shadow-glow">
             <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-              By the numbers
+              Tech Stack
             </h3>
-            <div className="mt-6 grid grid-cols-2 gap-6">
-              {stats.map((s, i) => (
-                <motion.div
-                  key={s.label}
-                  initial={{ opacity: 0, y: 12 }}
+            <div className="mt-6 flex flex-wrap gap-2.5">
+              {techStack.map((t, i) => (
+                <motion.span
+                  key={t}
+                  initial={{ opacity: 0, y: 8 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                  transition={{ delay: i * 0.08 }}
+                  className="inline-flex items-center rounded-full glass px-4 py-1.5 text-sm font-medium border border-border/60"
                 >
-                  <div className="text-4xl md:text-5xl font-bold text-gradient">
-                    <Counter to={s.value} suffix={s.suffix} />
-                  </div>
-                  <div className="mt-1 text-sm text-muted-foreground">{s.label}</div>
-                </motion.div>
+                  {t}
+                </motion.span>
               ))}
             </div>
             <div className="mt-8 pt-6 border-t border-border/60">
