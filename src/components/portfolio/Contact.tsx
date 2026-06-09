@@ -44,7 +44,7 @@ export function Contact() {
               </div>
             </a>
             <a
-              href="https://github.com/"
+              href="https://github.com/dibyansugouda4-debug"
               target="_blank"
               rel="noreferrer"
               className="group flex items-center gap-4 rounded-2xl p-4 transition-colors hover:bg-secondary"
@@ -54,7 +54,7 @@ export function Contact() {
               </div>
               <div>
                 <div className="text-xs text-muted-foreground">GitHub</div>
-                <div className="font-medium">@dibyansu</div>
+                <div className="font-medium">dibyansugouda4-debug</div>
               </div>
             </a>
             <a
