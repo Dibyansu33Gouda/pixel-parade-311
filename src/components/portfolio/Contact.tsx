@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, Send, MapPin } from "lucide-react";
+import { Mail, Github, Linkedin, Send, MapPin, Phone } from "lucide-react";
 import { Section, FadeIn } from "./Section";
 
 export function Contact() {
@@ -20,7 +20,7 @@ export function Contact() {
         <FadeIn>
           <div className="h-full rounded-3xl glass-strong p-7 shadow-glow flex flex-col gap-5">
             <a
-              href="mailto:dibyansu@example.com"
+              href="mailto:babugoudaa44@gmail.com"
               className="group flex items-center gap-4 rounded-2xl p-4 transition-colors hover:bg-secondary"
             >
               <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-primary to-accent-2 text-primary-foreground">
@@ -28,7 +28,19 @@ export function Contact() {
               </div>
               <div className="min-w-0">
                 <div className="text-xs text-muted-foreground">Email</div>
-                <div className="font-medium truncate">dibyansu@example.com</div>
+                <div className="font-medium truncate">babugoudaa44@gmail.com</div>
+              </div>
+            </a>
+            <a
+              href="tel:+917852918341"
+              className="group flex items-center gap-4 rounded-2xl p-4 transition-colors hover:bg-secondary"
+            >
+              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-accent-2 to-primary text-primary-foreground">
+                <Phone className="h-5 w-5" />
+              </div>
+              <div className="min-w-0">
+                <div className="text-xs text-muted-foreground">Phone</div>
+                <div className="font-medium truncate">+91 78529 18341</div>
               </div>
             </a>
             <a
@@ -46,7 +58,7 @@ export function Contact() {
               </div>
             </a>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/dibyansu-gouda-b5b432379"
               target="_blank"
               rel="noreferrer"
               className="group flex items-center gap-4 rounded-2xl p-4 transition-colors hover:bg-secondary"
