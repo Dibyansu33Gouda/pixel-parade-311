@@ -4,6 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-        base: "/pixel-parade-311/",
+  base: "/pixel-parade-311/",
   plugins: [react(), tailwindcss(), tsconfigPaths()],
+  publicDir: "public",
+  assetsInclude: ["**/*.pdf"],
 });
