@@ -1,14 +1,14 @@
 import { Section, FadeIn } from "./Section";
 import { Award, ExternalLink } from "lucide-react";
-import microsoftCert from "@/assets/microsoft-ai-fundamentals.pdf.asset.json";
-import ciscoCert from "@/assets/cisco-python-essentials.pdf.asset.json";
+import ciscoPdf from "@/assets/cisco-python-essentials.pdf";
+import microsoftPdf from "@/assets/microsoft-ai-fundamentals.pdf";
 
 const certs = [
   {
-    title: "Artificial Intelligence Fundamentals",
+    title: "Introduction to Generative AI and Agents",
     org: "Microsoft",
     gradient: "from-sky-500 to-blue-600",
-    url: "/pixel-parade-311/assets/microsoft-ai-fundamentals.pdf",
+    url: microsoftPdf,
   },
   {
     title: "Artificial Intelligence Essentials",
@@ -17,10 +17,10 @@ const certs = [
     url: null,
   },
   {
-    title: "Python Essentials",
+    title: "Python Essentials 1",
     org: "Cisco Networking Academy",
     gradient: "from-teal-500 to-cyan-600",
-    url: "/pixel-parade-311/assets/cisco-python-essentials.pdf",
+    url: ciscoPdf,
   },
 ];
 
@@ -39,7 +39,7 @@ export function Certifications() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {certs.map((c, i) => (
           <FadeIn key={c.title} delay={i * 0.06}>
-            <a
+            
               href={c.url ?? undefined}
               target={c.url ? "_blank" : undefined}
               rel={c.url ? "noopener noreferrer" : undefined}
@@ -54,7 +54,7 @@ export function Certifications() {
                 <h3 className="font-semibold">{c.title}</h3>
                 <div className="mt-1 text-sm text-muted-foreground">{c.org}</div>
                 {c.url ? (
-                  <a
+                  
                     href={c.url}
                     target="_blank"
                     rel="noopener noreferrer"
