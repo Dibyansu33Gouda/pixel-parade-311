@@ -39,7 +39,7 @@ export function Certifications() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {certs.map((c, i) => (
           <FadeIn key={c.title} delay={i * 0.06}>
-            
+            <a
               href={c.url ?? undefined}
               target={c.url ? "_blank" : undefined}
               rel={c.url ? "noopener noreferrer" : undefined}
@@ -54,7 +54,7 @@ export function Certifications() {
                 <h3 className="font-semibold">{c.title}</h3>
                 <div className="mt-1 text-sm text-muted-foreground">{c.org}</div>
                 {c.url ? (
-                  
+                  <a
                     href={c.url}
                     target="_blank"
                     rel="noopener noreferrer"
