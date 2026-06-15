@@ -5,7 +5,23 @@ import { Section } from "./Section";
 
 type Cat = "All" | "Python" | "Web" | "Cloud" | "AI";
 
-const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; gradient: string }[] = [];
+const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; gradient: string; github?: string }[] = [
+  {
+    title: "Python To-Do CLI",
+    desc: "A command-line to-do app built in Python. Supports adding, deleting, searching tasks by ID, and marking them complete. Data is stored persistently in a JSON file with nested details like priority, category, and deadline.",
+    tags: ["Python", "JSON", "CLI"],
+    cats: ["Python"],
+    gradient: "from-teal-500 to-cyan-600",
+    github: "https://github.com/Dibyansu33Gouda/python-todo-cli2",
+  },
+  {
+    title: "CLI Trade Monitor",
+    desc: "A command-line trading journal built in C using Doubly Linked List, Queue, and Stack data structures. Supports adding, viewing, and managing trade entries from the terminal.",
+    tags: ["C", "Data Structures", "CLI"],
+    cats: ["All"],
+    gradient: "from-blue-500 to-indigo-600",
+  },
+];
 
 const cats: Cat[] = ["All", "Python", "Web", "Cloud", "AI"];
 
@@ -100,8 +116,8 @@ export function Projects() {
                     </div>
                     <div className="mt-5 flex gap-2">
                       <a
-                        href="#"
-                        onClick={(e) => e.preventDefault()}
+                        href={p.github ?? "#"}
+                        onClick={(e) => { if (!p.github) e.preventDefault(); }}
                         className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-3.5 py-2 text-xs font-medium text-background transition-transform hover:scale-105"
                       >
                         <Github className="h-3.5 w-3.5" /> Code
