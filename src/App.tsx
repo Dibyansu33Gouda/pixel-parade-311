@@ -8,6 +8,8 @@ import { Certifications } from "@/components/portfolio/Certifications";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { MouseGlow } from "@/components/portfolio/MouseGlow";
+import faviconUrl from "@/assets/favicon.png?url";
+import { useEffect } from "react";
 
 export default function App() {
   return (
