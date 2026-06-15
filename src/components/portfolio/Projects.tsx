@@ -14,13 +14,6 @@ const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; grad
     gradient: "from-teal-500 to-cyan-600",
     github: "https://github.com/Dibyansu33Gouda/python-todo-cli2",
   },
-  {
-    title: "CLI Trade Monitor",
-    desc: "A command-line trading journal built in C using Doubly Linked List, Queue, and Stack data structures. Supports adding, viewing, and managing trade entries from the terminal.",
-    tags: ["C", "Data Structures", "CLI"],
-    cats: ["All"],
-    gradient: "from-blue-500 to-indigo-600",
-  },
 ];
 
 const cats: Cat[] = ["All", "Python", "Web", "Cloud", "AI"];
