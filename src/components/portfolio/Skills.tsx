@@ -10,6 +10,8 @@ const groups = [
       { name: "Python", level: 85 },
       { name: "C", level: 78 },
       { name: "SQL", level: 72 },
+      { name: "Pandas", level: 70 },
+      { name: "numpy" , level: 65 },
     ],
   },
   {
@@ -26,8 +28,9 @@ const groups = [
     title: "Technologies",
     items: [
       { name: "Cloud Computing", level: 65 },
-      { name: "Databases", level: 70 },
+      { name: "Databases", level: 80 },
       { name: "AI Fundamentals", level: 60 },
+      { name: "JSON" , level: 70 },
     ],
   },
   {
@@ -35,7 +38,7 @@ const groups = [
     title: "Currently Learning",
     items: [
       { name: "Web Development", level: 55 },
-      { name: "DSA", level: 50 },
+      { name: "DSA", level: 60 },
       { name: "Azure", level: 45 },
     ],
   },
