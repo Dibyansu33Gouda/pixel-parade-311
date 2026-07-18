@@ -79,11 +79,8 @@ export function Contact() {
 
         <FadeIn delay={0.1}>
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-              setTimeout(() => setSent(false), 2500);
-            }}
+            action="https://formspree.io/f/xqerqpao"
+            method="POST"
             className="rounded-3xl glass p-7 flex flex-col gap-4"
           >
             <div className="grid sm:grid-cols-2 gap-4">
@@ -91,6 +88,7 @@ export function Contact() {
                 <span className="text-xs font-medium text-muted-foreground">Name</span>
                 <input
                   id="contact-name"
+                  name="name"
                   required
                   className="mt-1.5 w-full rounded-2xl border border-border bg-card px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring transition"
                   placeholder="Your name"
@@ -100,6 +98,7 @@ export function Contact() {
                 <span className="text-xs font-medium text-muted-foreground">Email</span>
                 <input
                   id="contact-email"
+                  name="email"
                   required
                   type="email"
                   className="mt-1.5 w-full rounded-2xl border border-border bg-card px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring transition"
@@ -111,6 +110,7 @@ export function Contact() {
               <span className="text-xs font-medium text-muted-foreground">Subject</span>
               <input
                 id="contact-subject"
+                name="subject"
                 className="mt-1.5 w-full rounded-2xl border border-border bg-card px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring transition"
                 placeholder="What's this about?"
               />
@@ -119,6 +119,7 @@ export function Contact() {
               <span className="text-xs font-medium text-muted-foreground">Message</span>
               <textarea
                 id="contact-message"
+                name="message"
                 required
                 rows={5}
                 className="mt-1.5 w-full rounded-2xl border border-border bg-card px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-ring transition resize-none"
