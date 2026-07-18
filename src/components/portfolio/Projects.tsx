@@ -16,9 +16,9 @@ const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; grad
   },
   {
   title: "CareerCompass AI",
-  desc: "An AI-powered career roadmap generator. Paste your resume, pick a target role and get a personalized 30/60/90-day action plan with weekly tasks, ATS resume scanner, mock interview prep, and progress tracking.",
+  desc: "An AI-powered career roadmap generator. Paste your resume, pick a target role, and get a personalized 30/60/90-day action plan with weekly tasks, ATS resume scanner, mock interview prep, and progress tracking.",
   tags: ["React", "TypeScript", "AI", "Tailwind CSS"],
-  cats: ["Web", "AI"] as Cat[],
+  cats: ["Web", "AI"],
   gradient: "from-violet-500 to-purple-600",
   github: "https://github.com/Dibyansu33Gouda/career-compass-ai-242",
 },
@@ -123,13 +123,16 @@ export function Projects() {
                       >
                         <Github className="h-3.5 w-3.5" /> Code
                       </a>
-                      <a
-                        href="#"
-                        onClick={(e) => e.preventDefault()}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-2 text-xs font-medium transition-transform hover:scale-105"
-                      >
-                        <ExternalLink className="h-3.5 w-3.5" /> Demo
-                      </a>
+                      {p.github && (
+                        <a
+                          href={p.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-2 text-xs font-medium transition-transform hover:scale-105"
+                        >
+                          <ExternalLink className="h-3.5 w-3.5" /> Demo
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
