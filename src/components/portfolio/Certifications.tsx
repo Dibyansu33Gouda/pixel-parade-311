@@ -30,6 +30,12 @@ const certs = [
     gradient: "from-indigo-500 to-blue-700",
     url: ibmPdf,
   },
+  {
+  title: "Pandas",
+  org: "Kaggle",
+  gradient: "from-cyan-500 to-blue-500",
+  url: "https://drive.google.com/file/d/1bF5lsMB_dQdFXJo14rumDSMmj05Tme_q/view?usp=drive_link",
+},
 ];
 
 export function Certifications() {
