@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Section, FadeIn } from "./Section";
 import { GraduationCap, Sparkles, Target, BookOpen } from "lucide-react";
 
-const techStack = ["Python", "C", "Git", "GitHub"];
+const techStack = ["Python", "C", "Git", "GitHub" , "Pandas" , "Numpy" , "JSON" ,"DSA"];
 
 const cards = [
   {
