@@ -5,7 +5,7 @@ import { Section } from "./Section";
 
 type Cat = "All" | "Python" | "Web" | "Cloud" | "AI";
 
-const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; gradient: string; github?: string }[] = [
+const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; gradient: string; github?: string; demo?: string }[] = [
   {
     title: "Python To-Do CLI",
     desc: "A command-line to-do app built in Python. Supports adding, deleting, searching tasks by ID, and marking them complete. Data is stored persistently in a JSON file with nested details like priority, category, and deadline.",
@@ -21,6 +21,7 @@ const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; grad
   cats: ["Web", "AI"],
   gradient: "from-violet-500 to-purple-600",
   github: "https://github.com/Dibyansu33Gouda/career-compass-ai-242",
+  demo: "https://career-compass-ai-belv-56zacrjzk-dibyansu-coding.vercel.app/",
 },
 ];
 
@@ -123,9 +124,9 @@ export function Projects() {
                       >
                         <Github className="h-3.5 w-3.5" /> Code
                       </a>
-                      {p.github && (
+                      {p.demo && (
                         <a
-                          href={p.github}
+                          href={p.demo}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-2 text-xs font-medium transition-transform hover:scale-105"
