@@ -14,14 +14,6 @@ const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; grad
     gradient: "from-teal-500 to-cyan-600",
     github: "https://github.com/Dibyansu33Gouda/python-todo-cli2",
   },
-  {
-  title: "CareerCompass AI",
-  desc: "An AI-powered career roadmap generator. Paste your resume, pick a target role, and get a personalized 30/60/90-day action plan with weekly tasks, ATS resume scanner, mock interview prep, and progress tracking.",
-  tags: ["React", "TypeScript", "AI", "Tailwind CSS"],
-  cats: ["Web", "AI"],
-  gradient: "from-violet-500 to-purple-600",
-  github: "https://github.com/Dibyansu33Gouda/career-compass-ai-242",
-},
 ];
 
 const cats: Cat[] = ["All", "Python", "Web", "Cloud", "AI"];
