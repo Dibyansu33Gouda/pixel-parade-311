@@ -35,7 +35,14 @@ const certs = [
   org: "Kaggle",
   gradient: "from-cyan-500 to-blue-500",
   url: "https://drive.google.com/file/d/1bF5lsMB_dQdFXJo14rumDSMmj05Tme_q/view?usp=drive_link",
-},
+  },
+  {
+  title: "AI-For Begineers",
+  org: "HP Life",
+  gradient: "from-emerald-500 to-cyan-600",
+  url: "https://drive.google.com/file/d/1PeryaW4DCuih_gPj_GFmKHn4z_RnVRk1/view?usp=sharing"
+  },
+
 ];
 
 export function Certifications() {
