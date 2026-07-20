@@ -22,7 +22,15 @@ const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; grad
   gradient: "from-violet-500 to-purple-600",
   github: "https://github.com/Dibyansu33Gouda/career-compass-ai-242",
   demo: "https://career-compass-ai-belv-56zacrjzk-dibyansu-coding.vercel.app/",
-},
+  },
+  {
+  title: "FIFA World Cup 2026 Player & Team Analysis ",
+  desc: "Cleaned and analysed a player/team performances dataset - fixed a chained-assignment bug and a datetime parsing issue, then built groupby aggregation pipelines with per-90 normalization to compare players fairly across playing time.",
+  tags: ["Python" , "Pandas" , "NumPy" , "EDA"],
+  cats:["Python" , "AI"] as Cat[],
+  gradient: "from-emerland-500 to-cyan-600",
+  github: "https://github.com/Dibyansu33Gouda/kaggle_practice_dataset",
+  },
 ];
 
 const cats: Cat[] = ["All", "Python", "Web", "Cloud", "AI"];
