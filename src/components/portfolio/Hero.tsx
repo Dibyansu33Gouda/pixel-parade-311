@@ -106,8 +106,9 @@ export function Hero() {
               <Mail className="h-4 w-4" /> Contact Me
             </a>
             <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
+              href="https://drive.google.com/file/d/1nmS7qcL4PreTP0PJkvtV2_1E-4wBlIZb/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium transition-transform hover:scale-[1.03]"
             >
               <Download className="h-4 w-4" /> Resume
