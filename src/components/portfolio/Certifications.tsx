@@ -4,6 +4,7 @@ import ciscoPdf from "@/assets/cisco-python-essentials.pdf";
 import cisco2Pdf from "@/assets/cisco-python-essentials-2.pdf";
 import microsoftPdf from "@/assets/microsoft-ai-fundamentals.pdf";
 import ibmPdf from "@/assets/ibm-ai-fundamentals.pdf";
+import { url } from "inspector";
 
 const certs = [
   {
@@ -41,6 +42,12 @@ const certs = [
   org: "HP Life",
   gradient: "from-emerald-500 to-cyan-600",
   url: "https://drive.google.com/file/d/1PeryaW4DCuih_gPj_GFmKHn4z_RnVRk1/view?usp=sharing"
+  },
+  {
+  title: "VIBE2SHIP Hackathon",
+  org: "Coding ninjas sponsord by Google for Developers",
+  gradient: "from-yellow-400 via-amber-400 to-orange-500",
+  url: "https://drive.google.com/file/d/1YDI5suFNF_C5YIcOrIh5ZBgFK8uqKoMC/view?usp=sharing"
   },
 
 ];
