@@ -1,11 +1,12 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#education", label: "Education" },
-  { href: "#contact", label: "Contact" },
+  { href: "/skills", label: "Skills" },
+  { href: "/projects", label: "Projects" },
+  { href: "/education", label: "Education" },
+  { href: "/certifications", label: "Certifications" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Footer() {
@@ -26,9 +27,9 @@ export function Footer() {
           <ul className="grid grid-cols-2 gap-2">
             {links.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link to={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

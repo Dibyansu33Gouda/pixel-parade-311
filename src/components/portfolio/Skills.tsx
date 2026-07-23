@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Section, FadeIn } from "./Section";
 import { Code, Wrench, Cpu, Rocket } from "lucide-react";
 
@@ -6,41 +5,22 @@ const groups = [
   {
     Icon: Code,
     title: "Programming",
-    items: [
-      { name: "Python", level: 85 },
-      { name: "C", level: 78 },
-      { name: "SQL", level: 72 },
-      { name: "Pandas", level: 70 },
-      { name: "numpy" , level: 65 },
-    ],
+    items: ["Python", "C", "SQL", "Pandas", "NumPy"],
   },
   {
     Icon: Wrench,
     title: "Tools",
-    items: [
-      { name: "Git", level: 80 },
-      { name: "GitHub", level: 82 },
-      { name: "VS Code", level: 90 },
-    ],
+    items: ["Git", "GitHub", "VS Code"],
   },
   {
     Icon: Cpu,
     title: "Technologies",
-    items: [
-      { name: "Cloud Computing", level: 65 },
-      { name: "Databases", level: 80 },
-      { name: "AI Fundamentals", level: 60 },
-      { name: "JSON" , level: 70 },
-    ],
+    items: ["Cloud Computing", "Databases", "AI Fundamentals", "JSON"],
   },
   {
     Icon: Rocket,
     title: "Currently Learning",
-    items: [
-      { name: "Web Development", level: 55 },
-      { name: "DSA", level: 60 },
-      { name: "Azure", level: 45 },
-    ],
+    items: ["Web Development", "DSA", "Azure"],
   },
 ];
 
@@ -64,23 +44,14 @@ export function Skills() {
                 <g.Icon className="h-5 w-5" />
               </div>
               <h3 className="text-lg font-semibold mb-5">{g.title}</h3>
-              <div className="space-y-4">
-                {g.items.map((it, i) => (
-                  <div key={it.name}>
-                    <div className="flex justify-between text-xs font-medium mb-1.5">
-                      <span>{it.name}</span>
-                      <span className="text-muted-foreground">{it.level}%</span>
-                    </div>
-                    <div className="h-1.5 rounded-full bg-secondary overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${it.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.15 + i * 0.1, ease: "easeOut" }}
-                        className="h-full rounded-full bg-gradient-to-r from-primary via-accent-2 to-accent-3"
-                      />
-                    </div>
-                  </div>
+              <div className="flex flex-wrap gap-2">
+                {g.items.map((name) => (
+                  <span
+                    key={name}
+                    className="rounded-full bg-secondary px-3 py-1.5 text-xs font-medium text-secondary-foreground"
+                  >
+                    {name}
+                  </span>
                 ))}
               </div>
             </div>

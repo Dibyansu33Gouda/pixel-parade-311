@@ -1,55 +1,24 @@
 import { Section, FadeIn } from "./Section";
-import { Award, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import ciscoPdf from "@/assets/cisco-python-essentials.pdf";
 import cisco2Pdf from "@/assets/cisco-python-essentials-2.pdf";
 import microsoftPdf from "@/assets/microsoft-ai-fundamentals.pdf";
 import ibmPdf from "@/assets/ibm-ai-fundamentals.pdf";
-import { url } from "inspector";
+import pythonImg from "@/assets/thumbs/cert-python.jpg";
+import aiGenImg from "@/assets/thumbs/cert-ai-gen.jpg";
+import aiVisionImg from "@/assets/thumbs/cert-ai-vision.jpg";
+import pandasImg from "@/assets/thumbs/cert-pandas.jpg";
+import aiBeginImg from "@/assets/thumbs/cert-ai-begin.jpg";
+import hackathonImg from "@/assets/thumbs/cert-hackathon.jpg";
 
 const certs = [
-  {
-    title: "Python Essentials 1",
-    org: "Cisco Networking Academy",
-    gradient: "from-teal-500 to-cyan-600",
-    url: ciscoPdf,
-  },
-  {
-    title: "Python Essentials 2",
-    org: "Cisco Networking Academy",
-    gradient: "from-teal-600 to-green-600",
-    url: cisco2Pdf,
-  },
-  {
-    title: "Introduction to Generative AI and Agents",
-    org: "Microsoft",
-    gradient: "from-sky-500 to-blue-600",
-    url: microsoftPdf,
-  },
-  {
-    title: "AI Fundamentals: Language and Vision in AI",
-    org: "IBM SkillsBuild",
-    gradient: "from-indigo-500 to-blue-700",
-    url: ibmPdf,
-  },
-  {
-  title: "Pandas",
-  org: "Kaggle",
-  gradient: "from-cyan-500 to-blue-500",
-  url: "https://drive.google.com/file/d/1bF5lsMB_dQdFXJo14rumDSMmj05Tme_q/view?usp=drive_link",
-  },
-  {
-  title: "AI-For Begineers",
-  org: "HP Life",
-  gradient: "from-emerald-500 to-cyan-600",
-  url: "https://drive.google.com/file/d/1PeryaW4DCuih_gPj_GFmKHn4z_RnVRk1/view?usp=sharing"
-  },
-  {
-  title: "VIBE2SHIP Hackathon",
-  org: "Coding ninjas sponsord by Google for Developers",
-  gradient: "from-yellow-400 via-amber-400 to-orange-500",
-  url: "https://drive.google.com/file/d/1YDI5suFNF_C5YIcOrIh5ZBgFK8uqKoMC/view?usp=sharing"
-  },
-
+  { title: "Python Essentials 1", org: "Cisco Networking Academy", image: pythonImg, url: ciscoPdf },
+  { title: "Python Essentials 2", org: "Cisco Networking Academy", image: pythonImg, url: cisco2Pdf },
+  { title: "Introduction to Generative AI and Agents", org: "Microsoft", image: aiGenImg, url: microsoftPdf },
+  { title: "AI Fundamentals: Language and Vision in AI", org: "IBM SkillsBuild", image: aiVisionImg, url: ibmPdf },
+  { title: "Pandas", org: "Kaggle", image: pandasImg, url: "https://drive.google.com/file/d/1bF5lsMB_dQdFXJo14rumDSMmj05Tme_q/view?usp=drive_link" },
+  { title: "AI For Beginners", org: "HP Life", image: aiBeginImg, url: "https://drive.google.com/file/d/1PeryaW4DCuih_gPj_GFmKHn4z_RnVRk1/view?usp=sharing" },
+  { title: "VIBE2SHIP Hackathon", org: "Coding Ninjas × Google for Developers", image: hackathonImg, url: "https://drive.google.com/file/d/1YDI5suFNF_C5YIcOrIh5ZBgFK8uqKoMC/view?usp=sharing" },
 ];
 
 export function Certifications() {
@@ -74,9 +43,15 @@ export function Certifications() {
               onClick={(e) => { if (!c.url) e.preventDefault(); }}
               className={`group block h-full rounded-3xl glass overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-glow ${c.url ? "cursor-pointer" : "cursor-default"}`}
             >
-              <div className={`relative h-28 bg-gradient-to-br ${c.gradient}`}>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.5),transparent_60%)]" />
-                <Award className="absolute right-4 top-4 h-6 w-6 text-white/90" />
+              <div className="relative h-40 overflow-hidden">
+                <img
+                  src={c.image}
+                  alt={c.title}
+                  loading="lazy"
+                  width={768}
+                  height={512}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
               <div className="p-5">
                 <h3 className="font-semibold">{c.title}</h3>
