@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight, Mail, Download, Code2, Cloud, Sparkles, Database, Cpu, GitBranch } from "lucide-react";
 import heroImg from "@/assets/hero-illustration.png";
 
@@ -92,19 +93,19 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-8 flex flex-wrap gap-3"
           >
-            <a
-              href="#projects"
+            <Link
+              to="/projects"
               className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background shadow-glow transition-transform hover:scale-[1.03]"
             >
               View Projects
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-2 rounded-full glass-strong px-6 py-3 text-sm font-medium transition-transform hover:scale-[1.03]"
             >
               <Mail className="h-4 w-4" /> Contact Me
-            </a>
+            </Link>
             <a
               href="https://drive.google.com/file/d/1nmS7qcL4PreTP0PJkvtV2_1E-4wBlIZb/view?usp=sharing"
               target="_blank"
