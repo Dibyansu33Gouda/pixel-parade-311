@@ -1,21 +1,22 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#education", label: "Education" },
-  { href: "#certifications", label: "Certifications" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/skills", label: "Skills" },
+  { href: "/projects", label: "Projects" },
+  { href: "/education", label: "Education" },
+  { href: "/certifications", label: "Certifications" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -39,31 +40,27 @@ export function Navbar() {
             scrolled ? "glass-strong shadow-glow" : "glass"
           }`}
         >
-          <a href="#home" className="flex items-center gap-2 font-display font-bold">
+          <Link to="/" className="flex items-center gap-2 font-display font-bold">
             <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-primary to-accent-2 text-primary-foreground">
               D
             </span>
             <span className="hidden sm:inline">Dibyansu</span>
-          </a>
+          </Link>
           <nav className="hidden lg:flex items-center gap-1">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
-                href={l.href}
-                className="rounded-full px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                to={l.href}
+                className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors hover:bg-secondary hover:text-foreground ${
+                  pathname === l.href ? "bg-secondary text-foreground" : "text-muted-foreground"
+                }`}
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
           <div className="hidden lg:flex items-center gap-2">
             <ThemeToggle />
-            <a
-              href="#contact"
-              className="inline-flex items-center rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-transform hover:scale-105"
-            >
-              Let's talk
-            </a>
           </div>
           <div className="lg:hidden flex items-center gap-2">
             <ThemeToggle />
@@ -83,14 +80,14 @@ export function Navbar() {
             className="lg:hidden mt-2 glass-strong rounded-3xl p-3 flex flex-col gap-1"
           >
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
-                href={l.href}
+                to={l.href}
                 onClick={() => setOpen(false)}
                 className="rounded-xl px-4 py-2 text-sm font-medium hover:bg-secondary"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </motion.div>
         )}
