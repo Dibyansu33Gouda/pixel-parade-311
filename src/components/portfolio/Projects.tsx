@@ -2,16 +2,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 import { Github, ExternalLink } from "lucide-react";
 import { Section } from "./Section";
+import todoImg from "@/assets/thumbs/project-todo.jpg";
+import careerImg from "@/assets/thumbs/project-career.jpg";
+import fifaImg from "@/assets/thumbs/project-fifa.jpg";
 
 type Cat = "All" | "Python" | "Web" | "Cloud" | "AI";
 
-const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; gradient: string; github?: string; demo?: string }[] = [
+const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; image: string; github?: string; demo?: string }[] = [
   {
     title: "Python To-Do CLI",
     desc: "A command-line to-do app built in Python. Supports adding, deleting, searching tasks by ID, and marking them complete. Data is stored persistently in a JSON file with nested details like priority, category, and deadline.",
     tags: ["Python", "JSON", "CLI"],
     cats: ["Python"],
-    gradient: "from-teal-500 to-cyan-600",
+    image: todoImg,
     github: "https://github.com/Dibyansu33Gouda/python-todo-cli2",
   },
   {
@@ -19,7 +22,7 @@ const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; grad
   desc: "An AI-powered career roadmap generator. Paste your resume, pick a target role, and get a personalized 30/60/90-day action plan with weekly tasks, ATS resume scanner, mock interview prep, and progress tracking.",
   tags: ["React", "TypeScript", "AI", "Tailwind CSS"],
   cats: ["Web", "AI"],
-  gradient: "from-violet-500 to-purple-600",
+  image: careerImg,
   github: "https://github.com/Dibyansu33Gouda/career-compass-ai-242",
   demo: "https://career-compass-ai-belv-56zacrjzk-dibyansu-coding.vercel.app/",
   },
@@ -28,7 +31,7 @@ const projects: { title: string; desc: string; tags: string[]; cats: Cat[]; grad
   desc: "Cleaned and analysed a player/team performances dataset - fixed a chained-assignment bug and a datetime parsing issue, then built groupby aggregation pipelines with per-90 normalization to compare players fairly across playing time.",
   tags: ["Python" , "Pandas" , "NumPy" , "EDA"],
   cats:["Python" , "AI"] as Cat[],
-  gradient: "from-emerland-500 to-cyan-600",
+  image: fifaImg,
   github: "https://github.com/Dibyansu33Gouda/kaggle_practice_dataset",
   },
 ];
@@ -105,9 +108,17 @@ export function Projects() {
             >
               <TiltCard>
                 <div className="group h-full rounded-3xl glass overflow-hidden flex flex-col">
-                  <div className={`relative h-40 bg-gradient-to-br ${p.gradient} overflow-hidden`}>
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.5),transparent_60%)]" />
-                    <div className="absolute bottom-3 left-4 text-white/90 font-display text-sm font-semibold">
+                  <div className="relative h-44 overflow-hidden">
+                    <img
+                      src={p.image}
+                      alt={p.title}
+                      loading="lazy"
+                      width={768}
+                      height={512}
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                    <div className="absolute bottom-3 left-4 text-white font-display text-sm font-semibold drop-shadow">
                       {p.cats[0]}
                     </div>
                   </div>
