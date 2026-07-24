@@ -237,8 +237,17 @@ section:last-of-type { border-bottom: none; }
 .contact-form textarea { min-height: 120px; resize: vertical; }
 .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-footer { padding: 28px 0 48px; font-family: var(--font-mono); font-size: 12px; color: var(--text-faint); text-align: center; }
-
+footer {
+  padding: 28px 0 40px;
+  margin-top: 8px;
+  background: var(--bg-panel-2);
+  border-top: 1px solid var(--border-bright);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-faint);
+  text-align: center;
+}
+[data-theme="light"] footer { background: #EFE9DC; border-top-color: var(--accent-dim); }
 @media (max-width: 680px) {
   .termnav { position: fixed; inset: 49px 0 auto 0; background: var(--bg); border-bottom: 1px solid var(--border);
     flex-direction: column; gap: 0; padding: 8px 24px; display: none; }
