@@ -260,6 +260,9 @@ footer {
   color: var(--text-faint);
 }
 .footer-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -267,6 +270,18 @@ footer {
   flex-wrap: wrap;
 }
 .footer-content span { white-space: nowrap; }
+footer .social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+footer .social-icon {
+  flex: 0 0 38px;
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+footer .social-icon svg { display: block; }
 [data-theme="light"] footer { background: #EFE9DC; border-top-color: var(--accent-dim); }
 @media (max-width: 680px) {
   .termnav { position: fixed; inset: 49px 0 auto 0; background: var(--bg); border-bottom: 1px solid var(--border);
