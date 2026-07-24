@@ -34,18 +34,41 @@
 })();
 
 // ---------- typed hero prompt (index page only) ----------
+// ---------- typed hero prompt (index page only) — loops: type, pause, delete, pause ----------
 (function () {
   var el = document.getElementById('typed');
   if (!el) return;
   var text = el.getAttribute('data-text') || 'whoami';
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduced) { el.textContent = text; return; }
+
+  var TYPE_SPEED = 90;
+  var DELETE_SPEED = 55;
+  var PAUSE_AFTER_TYPE = 1400;
+  var PAUSE_AFTER_DELETE = 500;
+
   var i = 0;
+  var deleting = false;
+
   function tick() {
-    if (i <= text.length) {
+    if (!deleting) {
       el.textContent = text.slice(0, i);
-      i++;
-      setTimeout(tick, 90);
+      if (i < text.length) {
+        i++;
+        setTimeout(tick, TYPE_SPEED);
+      } else {
+        deleting = true;
+        setTimeout(tick, PAUSE_AFTER_TYPE);
+      }
+    } else {
+      el.textContent = text.slice(0, i);
+      if (i > 0) {
+        i--;
+        setTimeout(tick, DELETE_SPEED);
+      } else {
+        deleting = false;
+        setTimeout(tick, PAUSE_AFTER_DELETE);
+      }
     }
   }
   tick();
