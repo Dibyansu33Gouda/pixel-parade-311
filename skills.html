@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills — Dibyansu Gouda</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="termbar">
+  <div class="termbar-inner">
+    <div class="termbar-left">
+      <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+      <span class="termbar-title">dibyansu@portfolio:~/skills</span>
+    </div>
+    <div class="termbar-right">
+      <nav class="termnav" id="termnav">
+        <a href="index.html"><span class="idx">01</span> home</a>
+        <a href="projects.html"><span class="idx">02</span> projects</a>
+        <a href="certifications.html"><span class="idx">03</span> certifications</a>
+        <a href="skills.html" class="active"><span class="idx">04</span> skills</a>
+        <a href="contact.html"><span class="idx">05</span> contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()">[ dark ]</button>
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="page-section" style="border-bottom:1px solid var(--border);">
+    <div class="sec-head"><span class="cmd">$ cat</span><h2>skills.json</h2></div>
+    <p class="sec-lede">Labeled by how I actually use each one, not a percentage bar guessing at mastery.</p>
+
+    <div class="skills-grid">
+      <div class="skill-col">
+        <div class="skill-label">Languages</div>
+        <ul class="skill-list">
+          <li>Python <span class="bar">daily use</span></li>
+          <li>C <span class="bar">coursework + assessed</span></li>
+          <li>SQL <span class="bar">project use</span></li>
+          <li>JavaScript / TypeScript <span class="bar">project use</span></li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <div class="skill-label">Frameworks &amp; Tools</div>
+        <ul class="skill-list">
+          <li>Next.js / React <span class="bar">project use</span></li>
+          <li>FastAPI <span class="bar">project use</span></li>
+          <li>Git &amp; GitHub Actions <span class="bar">daily use</span></li>
+          <li>Vercel / Render <span class="bar">deployment</span></li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <div class="skill-label">Data &amp; AI</div>
+        <ul class="skill-list">
+          <li>Pandas <span class="bar">daily practice</span></li>
+          <li>NumPy <span class="bar">project use</span></li>
+          <li>EDA / data cleaning <span class="bar">project use</span></li>
+          <li>LLM APIs (Groq/Llama) <span class="bar">project use</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer data-footer-date>built by dibyansu — last commit {{DATE}}</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

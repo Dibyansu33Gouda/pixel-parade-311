@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Dibyansu Gouda</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="termbar">
+  <div class="termbar-inner">
+    <div class="termbar-left">
+      <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+      <span class="termbar-title">dibyansu@portfolio:~/projects</span>
+    </div>
+    <div class="termbar-right">
+      <nav class="termnav" id="termnav">
+        <a href="index.html"><span class="idx">01</span> home</a>
+        <a href="projects.html" class="active"><span class="idx">02</span> projects</a>
+        <a href="certifications.html"><span class="idx">03</span> certifications</a>
+        <a href="skills.html"><span class="idx">04</span> skills</a>
+        <a href="contact.html"><span class="idx">05</span> contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()">[ dark ]</button>
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="page-section" style="border-bottom:1px solid var(--border);">
+    <div class="sec-head"><span class="cmd">$ ls -la</span><h2>projects/</h2></div>
+    <p class="sec-lede">Things I've built end-to-end — from a deployed AI tool to small Python utilities I wrote to actually use what I was learning.</p>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-name">career-compass-ai/</span>
+        <span class="pill pill-live">live</span>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">
+          An AI-powered career roadmap generator, built for the <strong>Google Vibe Coding Hackathon</strong>
+          and fully deployed. Paste a resume, pick a target role, and get back a structured action plan.
+        </p>
+        <div class="card-log">
+          <span class="l"><span class="plus">+</span> Next.js 15 frontend on Vercel, FastAPI backend on Render</span>
+          <span class="l"><span class="plus">+</span> switched to Groq's Llama 3.3 70B after hitting Gemini API issues</span>
+          <span class="l"><span class="minus">−</span> fixed CORS, pydantic version pinning, and unicode encoding bugs in the deploy pipeline</span>
+        </div>
+        <div class="chip-row">
+          <span class="chip">Next.js</span><span class="chip">FastAPI</span><span class="chip">Groq / Llama 3.3</span><span class="chip">Vercel + Render</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Dibyansu33Gouda/career-compass-ai" target="_blank" rel="noopener">source ↗</a>
+          <a href="#" class="disabled">live demo — [ add deployed URL ]</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-name">portfolio-site/</span>
+        <span class="pill pill-live">live</span>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">
+          This site's predecessor — a personal portfolio converted from a Lovable/TanStack starter into a
+          proper <strong>Vite + React SPA</strong>, with real projects, certificates, and SEO passes,
+          deployed on a GitHub Actions pipeline.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Vite</span><span class="chip">React</span><span class="chip">GitHub Actions</span><span class="chip">GitHub Pages</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Dibyansu33Gouda/pixel-parade-311" target="_blank" rel="noopener">source ↗</a>
+          <a href="https://dibyansu33gouda.github.io/pixel-parade-311/" target="_blank" rel="noopener">live ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-name">fifa-2026-player-analysis/</span>
+        <span class="pill pill-done">complete</span>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">
+          Cleaned and analysed a FIFA World Cup 2026 player/team performance dataset — fixed a chained-assignment
+          bug and a datetime parsing issue, then built groupby aggregation pipelines with per-90 normalization
+          to compare players fairly across playing time.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">EDA</span>
+        </div>
+        <div class="card-links">
+          <a href="#" class="disabled">source — [ add repo link ]</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-name">python-todo-cli/</span>
+        <span class="pill pill-done">complete</span>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">
+          A command-line to-do app in Python. Supports adding, deleting, searching, and completing tasks
+          by ID, with data persisted to JSON including priority, category, and deadline fields.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Python</span><span class="chip">JSON</span><span class="chip">CLI</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Dibyansu33Gouda/python-todo-cli2" target="_blank" rel="noopener">source ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-name">snake-game/</span>
+        <span class="pill pill-done">complete</span>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">
+          A classic Snake game built with a friend using Python and Tkinter — grid-based movement,
+          collision detection, and score tracking.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Python</span><span class="chip">Tkinter</span>
+        </div>
+        <div class="card-links">
+          <a href="#" class="disabled">source — [ add repo link ]</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-name">calculator/</span>
+        <span class="pill pill-done">complete</span>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">
+          A functional desktop calculator built with Python and Tkinter — standard arithmetic
+          operations wired to a clickable button grid.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Python</span><span class="chip">Tkinter</span>
+        </div>
+        <div class="card-links">
+          <a href="#" class="disabled">source — [ add repo link ]</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+
+<footer data-footer-date>built by dibyansu — last commit {{DATE}}</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

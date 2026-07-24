@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Dibyansu Gouda</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="termbar">
+  <div class="termbar-inner">
+    <div class="termbar-left">
+      <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+      <span class="termbar-title">dibyansu@portfolio:~/contact</span>
+    </div>
+    <div class="termbar-right">
+      <nav class="termnav" id="termnav">
+        <a href="index.html"><span class="idx">01</span> home</a>
+        <a href="projects.html"><span class="idx">02</span> projects</a>
+        <a href="certifications.html"><span class="idx">03</span> certifications</a>
+        <a href="skills.html"><span class="idx">04</span> skills</a>
+        <a href="contact.html" class="active"><span class="idx">05</span> contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()">[ dark ]</button>
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="page-section" style="border-bottom:1px solid var(--border);">
+    <div class="sec-head"><span class="cmd">$ cat</span><h2>contact.txt</h2></div>
+
+    <div class="contact-box">
+      <p>Open to internships, collaborations, and conversations about tech. I'll reply soon.</p>
+      <div class="contact-rows">
+        <div class="contact-row"><span class="k">email</span><span class="v">babugoudaa44@gmail.com</span></div>
+        <div class="contact-row"><span class="k">phone</span><span class="v">+91 78529 18341</span></div>
+        <div class="contact-row"><span class="k">github</span><a class="v" href="https://github.com/Dibyansu33Gouda" target="_blank" rel="noopener">Dibyansu33Gouda</a></div>
+        <div class="contact-row"><span class="k">linkedin</span><a class="v" href="https://linkedin.com/in/dibyansu-gouda" target="_blank" rel="noopener">in/dibyansu-gouda</a></div>
+      </div>
+
+      <form class="contact-form" action="#" method="POST" onsubmit="return false;">
+        <div class="form-row-2">
+          <div>
+            <label for="name">name</label>
+            <input type="text" id="name" name="name" placeholder="your name">
+          </div>
+          <div>
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com">
+          </div>
+        </div>
+        <div>
+          <label for="subject">subject</label>
+          <input type="text" id="subject" name="subject" placeholder="what's this about?">
+        </div>
+        <div>
+          <label for="message">message</label>
+          <textarea id="message" name="message" placeholder="say hello"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary">send message →</button>
+        </div>
+        <p style="font-family:var(--font-mono); font-size:11px; color:var(--text-faint);">
+          // note: wire this to a form backend (Formspree, Web3Forms, or a small serverless endpoint) before going live — a static page can't send email on its own.
+        </p>
+      </form>
+    </div>
+  </section>
+
+</div>
+
+<footer data-footer-date>built by dibyansu — last commit {{DATE}}</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

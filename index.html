@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dibyansu Gouda — CSE Student</title>
+<meta name="description" content="Dibyansu Gouda — B.Tech CSE student at NIST University, Odisha. Building projects in Python, AI, and full-stack web development.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="termbar">
+  <div class="termbar-inner">
+    <div class="termbar-left">
+      <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+      <span class="termbar-title">dibyansu@portfolio:~</span>
+    </div>
+    <div class="termbar-right">
+      <nav class="termnav" id="termnav">
+        <a href="index.html" class="active"><span class="idx">01</span> home</a>
+        <a href="projects.html"><span class="idx">02</span> projects</a>
+        <a href="certifications.html"><span class="idx">03</span> certifications</a>
+        <a href="skills.html"><span class="idx">04</span> skills</a>
+        <a href="contact.html"><span class="idx">05</span> contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()">[ dark ]</button>
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="hero" style="border-top:none;">
+    <div class="prompt-line"><span class="user">dibyansu</span><span class="sep">@</span>nist<span class="sep">:~$</span> <span id="typed" data-text="whoami"></span><span class="cursor"></span></div>
+
+    <div class="home-grid">
+      <div class="photo-slot">
+        <!-- Replace this div with: <img src="assets/photo.jpg" alt="Dibyansu Gouda"> -->
+        add photo<br>assets/photo.jpg<br>(square, min 500×500)
+      </div>
+      <div>
+        <h1>CSE undergrad,<br>building toward <span class="accent">AI engineering</span>.</h1>
+        <p class="hero-sub">
+          I'm <strong>Dibyansu Gouda</strong>, a B.Tech Computer Science Engineering student at
+          <strong>NIST University, Berhampur, Odisha</strong> — second year, class of 2029.
+          Most of my time outside coursework goes into Python, data work with pandas/NumPy,
+          and shipping small full-stack projects rather than just following tutorials.
+        </p>
+        <div class="hero-meta">
+          <span class="tag">B.Tech CSE · NIST University</span>
+          <span class="tag">Python · Pandas · NumPy</span>
+          <span class="tag">Odisha, India</span>
+        </div>
+        <div class="btn-row">
+          <a href="assets/Dibyansu_Gouda_Resume.pdf" class="btn btn-primary" download>↓ download resume</a>
+          <a href="contact.html" class="btn">get in touch</a>
+          <a href="https://github.com/Dibyansu33Gouda" class="btn" target="_blank" rel="noopener">github ↗</a>
+        </div>
+        <div class="status-line"><span class="k">$</span> status — currently in 3rd semester, self-teaching AI/ML fundamentals alongside coursework</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="page-section">
+    <div class="sec-head"><span class="cmd">$ cat</span><h2>about.md</h2></div>
+    <div class="about-body">
+      <p>
+        I started my B.Tech in Computer Science Engineering in 2025 and I'm currently in my
+        third semester. My core stack right now is <strong>Python, C, and SQL</strong> for
+        fundamentals, and <strong>JavaScript/TypeScript with Next.js, React, and FastAPI</strong>
+        for anything I ship end-to-end.
+      </p>
+      <p>
+        Most of what I build starts as a way to actually use what I'm learning instead of leaving
+        it in notes — a deployed AI career-planning tool, a portfolio rebuilt from scratch,
+        small Python utilities, and ongoing practice with pandas and NumPy on real datasets.
+      </p>
+      <p>
+        Outside of class, I spend a lot of time on self-directed learning: certifications from
+        Cisco, IBM, and Microsoft, daily DSA practice, and reading through documentation instead
+        of waiting for a course to cover something. Details on all of that are on the
+        <a href="projects.html">projects</a>, <a href="certifications.html">certifications</a>,
+        and <a href="skills.html">skills</a> pages.
+      </p>
+    </div>
+  </section>
+
+</div>
+
+<footer data-footer-date>built by dibyansu — last commit {{DATE}}</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
