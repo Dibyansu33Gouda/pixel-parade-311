@@ -54,7 +54,10 @@
         <div class="contact-row"><span class="k">linkedin</span><a class="v" href="https://linkedin.com/in/dibyansu-gouda" target="_blank" rel="noopener">in/dibyansu-gouda</a></div>
       </div>
 
-      <form class="contact-form" action="#" method="POST" onsubmit="return false;">
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="a2f181fe-6526-424c-834c-d5def026a834">
+        <input type="hidden" name="subject" value="New message from your portfolio">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-row-2">
           <div>
             <label for="name">name</label>
@@ -76,9 +79,7 @@
         <div>
           <button type="submit" class="btn btn-primary">send message →</button>
         </div>
-        <p style="font-family:var(--font-mono); font-size:11px; color:var(--text-faint);">
-          // note: wire this to a form backend (Formspree, Web3Forms, or a small serverless endpoint) before going live — a static page can't send email on its own.
-        </p>
+        
       </form>
     </div>
   </section>
