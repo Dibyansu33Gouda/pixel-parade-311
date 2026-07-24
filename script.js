@@ -1,15 +1,24 @@
-// ---------- theme (persisted, defaults to dark) ----------
+// ---------- theme: system preference by default, manual toggle overrides & persists ----------
 (function () {
   var stored = null;
   try { stored = localStorage.getItem('theme'); } catch (e) {}
-  var theme = stored || 'dark';
+
+  var systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  var theme = stored || (systemPrefersLight ? 'light' : 'dark');
   applyTheme(theme);
+
+  // if the person hasn't manually chosen a theme yet, keep following the OS live
+  if (!stored) {
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function (e) {
+      applyTheme(e.matches ? 'light' : 'dark');
+    });
+  }
 
   window.toggleTheme = function () {
     var current = document.documentElement.getAttribute('data-theme') || 'dark';
     var next = current === 'dark' ? 'light' : 'dark';
     applyTheme(next);
-    try { localStorage.setItem('theme', next); } catch (e) {}
+    try { localStorage.setItem('theme', next); } catch (e) {} // manual choice now locked in
   };
 
   function applyTheme(t) {
